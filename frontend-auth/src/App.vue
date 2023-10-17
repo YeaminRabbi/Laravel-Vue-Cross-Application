@@ -4,7 +4,7 @@
       <router-link :to="{ name: 'home' }">Home</router-link> |
       <router-link :to="{ name: 'about' }">About</router-link> |
       <router-link :to="{ name: 'users' }">Users</router-link> |
-      <router-link :to="{ name: 'login' }">Login</router-link>
+      <router-link :to="{ name: 'user-login' }">Login</router-link>
 
     </header>
     <router-view></router-view>

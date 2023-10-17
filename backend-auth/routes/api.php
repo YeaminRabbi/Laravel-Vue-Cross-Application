@@ -19,5 +19,17 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 
+Route::middleware('auth:sanctum')->group(function () {
+    
+    Route::get('/check-auth', [AuthCheckerController::class, 'checkAuth']);
+    
+    Route::post('/user-logout', [ApiAuthController::class, 'logout']);
+    
+    // Route::get('/confirm', [ApiController::class, 'getConfirm']);
+
+});
+
+Route::post('/user-login', [ApiAuthController::class, 'login']);
+
 
 Route::get('/users', [ApiController::class, 'getUsers']);
